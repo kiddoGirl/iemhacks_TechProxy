@@ -44,7 +44,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 
-app.post('/index', upload.single('image'), async(req, res, next) => {
+app.post('/blogs/index', upload.single('image'), async(req, res, next) => {
     console.log(req.file);
     var obj = {
         title: req.body.title,
