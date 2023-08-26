@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgronomyNet - Blog Details</title>
-    <link rel="stylesheet" href="/detailsks.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgronomyNet - Blog Details</title>
+  <link rel="stylesheet" href="/detailsks.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
 </head>
+
 <body>
     
     
-   <div class="blog-details">
+  <div class="blog-details">
 
-            <img class="blog-image"  src="data:blog/<%=blog.img.contentType%>;base64,
-            <%=blog.img.data.toString('base64')%>" alt="blog-img">
+    <img class="blog-image"  src="data:blog/<%=blog.img.contentType%>;base64,<%=blog.img.data.toString('base64')%>" alt="blog-img">
 
-            <h2  class="blog-title"><%= blog.title %></h2>
-            <p class="blog-content"><%= blog.body %></p>
+    <h2  class="blog-title"><%= blog.title %></h2>
+    <p class="blog-content"><%= blog.body %></p>
 
-            <a class="home-button" data-doc="<%= blog._id %>">Delete</a>
+    <a class="home-button" data-doc="<%= blog._id %>">Delete</a>
 
   </div>
   
 
 
   <script>
+
     const trashcan = document.querySelector('a.home-button');
   
     trashcan.addEventListener('click', (e) => {
@@ -36,14 +40,15 @@
       if (shouldDelete) {
         const endpoint = `/blogs/${trashcan.dataset.doc}`;
   
-            fetch(endpoint, {
-                method: 'DELETE'
-            })
-            .then((response) => response.json())
-            .then((data) => window.location.href = data.redirect)
-            .catch((err) => {console.log(err);});
-        }
+          fetch(endpoint, {
+            method: 'DELETE'
+          })
+          .then((response) => response.json())
+          .then((data) => window.location.href = data.redirect)
+          .catch((err) => {console.log(err);});
+      }
     });
+    
   </script>
   
 

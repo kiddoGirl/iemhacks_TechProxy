@@ -16,24 +16,34 @@
     font-weight: bolder;
 }
 
-.logo{
-    width: 200px;
-    height: 50px;
+.logo-link {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bolder;
+    text-decoration: none;
+    color:greenyellow;
 }
 
-.logo img{
-    width: 100%;
-    height: 70px;
-    align-items: center;
-    object-fit: cover;
-    border-radius: 20px;
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px; 
+}
+
+
+.logo img {
+    width: 100%; 
+    height: auto;
 }
 
 
 .menubar ul li{
     width: 160px;
-    margin: 10px;
-    padding: 15px;
+    margin: 8px;
+    padding: 18px;
 }
 
 .menubar ul li a{

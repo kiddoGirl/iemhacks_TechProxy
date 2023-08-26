@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Courier New', Courier, monospace;
-    background-image: url(images/help-img.jpg);
+    background-image: url(/images/help-img.jpg);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

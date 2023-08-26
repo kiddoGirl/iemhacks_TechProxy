@@ -1,12 +1,34 @@
-body{
+body {
     margin: 0;
     padding: 0;
     font-family: 'Courier New', Courier, monospace;
-    background-image: url(images\err.jpg);
+    background-image: url(/images/err.jpg);
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    justify-content: center;
     min-height: 100vh;
+}
+
+.error-message {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.error-message:hover {
+    transform: scale(1.01);
+}
+
+h1 {
+    color: rgb(0,100,0); 
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: red;
+    font-size: 18px;
+    line-height: 1.4;
 }

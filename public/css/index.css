@@ -1,0 +1,82 @@
+/*Styling for the Landing page section*/
+
+#home {
+  background: url("/img/index/bg.jpeg") no-repeat center center /cover;
+}
+
+.main-index {
+  padding: 130px 80px 130px 80px;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.main-index div:nth-child(1) {
+  padding: 50px;
+  background-color: rgb(0,100,0,0.7);
+}
+
+.main-index div:nth-child(1) a {
+  color: white;
+  background: #000000;
+  background: -webkit-linear-gradient(45deg, rgb(0, 100, 0), rgb(0, 80, 0));
+  background: linear-gradient(45deg, rgb(0, 100, 0), rgb(0, 80, 0));
+}
+
+.main-index div:nth-child(1) a:hover {
+  background: -webkit-linear-gradient(90deg, rgb(0, 120, 0), rgb(0, 90, 0));
+  background: linear-gradient(90deg, rgb(0, 120, 0), rgb(0, 90, 0));
+}
+
+.main-index div:nth-child(1) div {
+  display: flex;
+  justify-content: space-around;
+}
+
+.main-index div:nth-child(1) h1 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: white;
+}
+
+.err-msg {
+  text-align: center;
+  color: red;
+}
+
+/*Styling for the news category page section*/
+.tile{
+  margin: 75px;
+}
+.each-row{
+  transition: 0.8s;
+  transform: scale(1);
+  margin: 30px;
+}
+.each-row:hover{
+  transition: 0.5s;
+  transform: scale(1.025);
+}
+.sub-navbar{
+  margin-top: 64px;
+}
+
+.weather-div{
+  padding: 25px;margin-top: 65px;display: flex;width: 100%;justify-content: space-between;
+}
+.weather-div h3{
+  color: rgb(0,100,0);
+}
+.weather-div img{
+  background-color: rgb(0,100,0);
+  border-radius: 20px;
+}
+.weather-div p{
+  font-size: 19px;
+}
+.text-analysis{
+  margin-top: 60px;padding: 0px 42px;display: flex;justify-content: space-around;
+}
+.text-analysis p{
+  font-size: 19px;
+}
