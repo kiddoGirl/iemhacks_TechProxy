@@ -1,0 +1,97 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-image: url(images/signinpic.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.produce-info-form {
+    width: 600px;
+    margin: 0 auto;
+    background-color:rgba(0, 0, 0, 0.4);
+    padding: 20px 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.produce-info-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: large;
+    color: #fff;
+}
+
+.produce-info-form input[type="text"],
+.produce-info-form input[type="number"],
+.produce-info-form textarea,
+.produce-info-form select {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.produce-info-form input[type="file"] {
+    margin-bottom: 15px;
+}
+
+.produce-info-form input:focus,
+.produce-info-form textarea:focus,
+.produce-info-form select:focus {
+    outline: none;
+    border-color: green;
+    box-shadow: 0 0 2px green;
+}
+
+.produce-info-form .cartuserinfo input[type="text"] {
+    width: 550px;
+}
+
+.produce-info-form .cartuserinfo textarea {
+    width: 550px;
+}
+
+.produce-info-form .cartuserinfo label {
+    display: inline-block;
+    width: 250px;
+}
+
+.produce-info-form .cartuserinfo img {
+    max-width: 100%;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.produce-info-form a{
+    align-items: center;
+    margin: 10px;
+    width: 150px;
+    text-align: center;
+    padding: 15px;
+    color: #fff;
+    background: rgb(0,100,0);
+    font-size: larger;
+    font-weight: bolder;
+    border: none;
+    margin-top: 30px;
+    text-decoration: none;
+    float: right;
+    border-radius: 6px;
+}
+
+.produce-info-form a:hover {
+    opacity: 0.8;
+    background-color: #000000;
+    color: greenyellow;
+}

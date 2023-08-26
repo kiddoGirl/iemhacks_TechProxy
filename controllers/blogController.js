@@ -4,6 +4,7 @@ const Blog = require('../models/blog');
 const blog_index = (req,res) => {
     Blog.find().sort({createdAt: -1})
         .then((result) => {
+            // console.log(result)
             res.render('blogs/index',{title:'All Blogs',blogs: result})
         })
         .catch((err) => {
@@ -32,7 +33,6 @@ const blog_create_get = (req,res) => {
 
 
 const blog_create_post = (req,res) => {
-    
 };
 
 
@@ -42,7 +42,7 @@ const blog_delete = (req,res) =>{
  
     Blog.findByIdAndDelete(id) 
         .then((result) => {
-           res.json({ redirect: '/blogs'})   
+           res.json({ redirect: '/blogs/index'})   
         })
         .catch((err) => {
             console.log(err);

@@ -57,7 +57,7 @@ app.post('/blogs/index', upload.single('image'), async(req, res, next) => {
     }
     await Blog.create(obj)
     .then ((err, item) => {
-        res.redirect('/blogs');  
+        res.redirect('/blogs/index');  
     });
    
 });

@@ -9,40 +9,49 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(0, 0, 0, 0.247);
+    background: rgb(0,100,0);
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    border-radius: 30px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-.centre-fea{
-    color: #000000;
-    font-weight: bold;
-    font-size: 4rem; 
-    text-align: center;
+.aim h1 {
+    margin-left: 590px;
+    font-size: 36px;
+    color: #333;
+    text-transform: uppercase;
     position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    align-items: center;
+    justify-content: center;
 }
-
-
-.centre-fea::before,
-.centre-fea::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  width: 35%;
-  border-top: 5px solid #00000091; 
-  border-radius: 2.5px;
+  
+.aim h1::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 2px;
+    background-color: rgb(19, 189, 19);
+    opacity: 0;
+    transition: opacity 0.3s ease, width 0.3s ease;
 }
-
-.centre-fea::before {
-  left: 0;
+  
+.aim h1:hover {
+    color: rgb(19, 189, 19);
 }
-
-.centre-fea::after {
-  right: 0;
+  
+.aim h1:hover::before {
+    opacity: 1;
+    width: 50%;
 }
+  
 
 .container {
     position: relative;
@@ -316,29 +325,6 @@
 }
 
 
-
-
-
-@media (max-width: 480px) {
-    .container .card {
-        width: 230px;
-        border-radius: 15px;
-    }
-
-    .container .card .img-box {
-        width: 185px;
-        border-radius: 10px;
-    }
-
-    .container .card .content p {
-        font-size: 0.8rem;
-    }
-
-    .container .card .content a {
-        font-size: 0.9rem;
-    }
-}
-
 .icon-container {
     flex: 1;
     display: flex;
@@ -422,4 +408,23 @@ section:hover .text-container h2::after  {
 }
 
 
-  
+
+@media (max-width: 480px) {
+    .container .card {
+        width: 230px;
+        border-radius: 15px;
+    }
+
+    .container .card .img-box {
+        width: 185px;
+        border-radius: 10px;
+    }
+
+    .container .card .content p {
+        font-size: 0.8rem;
+    }
+
+    .container .card .content a {
+        font-size: 0.9rem;
+    }
+}

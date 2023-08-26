@@ -118,7 +118,8 @@
 }
 
 .produce{
-  width:300px;
+  margin: 0 auto;
+  width:350px;
   height:500px;
   background: #fff;
   box-sizing: border-box; 
@@ -425,89 +426,6 @@
     opacity: 1;
 }
 
-.produce-info-form {
-    max-width: 700px;
-    margin: 0 auto;
-    background-color:rgb(238, 232, 232);
-    padding: 20px 30px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.produce-info-form label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    font-size: large;
-}
-
-.produce-info-form input[type="text"],
-.produce-info-form input[type="number"],
-.produce-info-form textarea,
-.produce-info-form select {
-    width: 90%;
-    padding: 13px;
-    margin-bottom: 15px;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    box-sizing: border-box;
-    font-size: 16px;
-}
-
-.produce-info-form input[type="file"] {
-    margin-bottom: 15px;
-}
-
-.produce-info-form input:focus,
-.produce-info-form textarea:focus,
-.produce-info-form select:focus {
-    outline: none;
-    border-color: green;
-    box-shadow: 0 0 2px green;
-}
-
-.produce-info-form .cartuserinfo input[type="text"] {
-    width: 550px;
-}
-
-.produce-info-form .cartuserinfo textarea {
-    width: 550px;
-}
-
-.produce-info-form .cartuserinfo label {
-    display: inline-block;
-    width: 250px;
-}
-
-.produce-info-form .cartuserinfo img {
-    max-width: 100%;
-    margin-bottom: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.produce-info-form a{
-    align-items: center;
-    margin: 10px;
-    width: 150px;
-    text-align: center;
-    padding: 15px;
-    color: #fff;
-    background: rgb(0,100,0);
-    font-size: larger;
-    font-weight: bolder;
-    border: none;
-    margin-top: 30px;
-    text-decoration: none;
-    float: right;
-    border-radius: 6px;
-}
-
-.produce-info-form a:hover {
-    opacity: 0.8;
-    background-color: #000000;
-    color: greenyellow;
-}
 
 .agriculture-card-container {
     display: flex;
