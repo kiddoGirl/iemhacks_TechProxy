@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ArtiZen | <%= title %></title>
+        <link rel="stylesheet" href="/createks.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+    <script>
+        function handleFileSelect(event){
+            const file = event.target.files[0];
+            const reader = new FileReader();
+
+            reader.onload=function(event){
+                const image = document.getElementById('selected-image');
+                image.style.display = 'block';
+                image.src=event.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+    </script>
+
+
+<body>
+    
+
+
+
+    <div class="section">
+        <i class="fas fa-pencil-alt icon"></i>
+        <p class="content">Here you can create your own blog about agriculture and share your knowledge.</p>
+    </div>
+
+
+
+
+    <div class="form-section">
+        <form class="centre" method="POST" action="/"  enctype="multipart/form-data">
+            <label class="form-label" for="image">Image</label>
+            <input style="margin-bottom:20px;" type="file" name="image" id="image-input" accept="image/*" onchange="handleFileSelect(event)">
+            <img id="selected-image" src="#" />
+            
+            <label class="form-label" for="title">Title</label>
+            <input class="form-input" type="text" id="title" name="title">
+            
+            <label class="form-label" for="snippet">Snippet</label>
+            <input class="form-input" type="text" id="snippet" name="snippet">
+            
+            <label class="form-label" for="content">Content</label>
+            <textarea class="form-textarea" id="content" name="body" ></textarea>
+            
+            <button class="form-button" type="submit"onclick="myfunction()">Submit</button>
+        </form>
+    </div>
+
+
+
+
+
+
+<!-- 
+    <div class="centre-box">
+        <form class="centre" method="POST" action="/"  enctype="multipart/form-data">
+            <div class="indivitual">
+                <p class="question">Set your background image</p>
+                <label for="image-input" class="custom-file-input">Select an Image</label>
+                <input type="file" name="image" id="image-input" accept="image/*" onchange="handleFileSelect(event)">
+               <img id="selected-image" src="#" />
+            </div>
+
+            <div class="indivitual">
+                <p class="question">Set your Blog Title Name</p>
+                <input type="text" name="title" class="input-box" required>
+            </div>
+
+            <div class="indivitual">
+                <p class="question">Set your Blog Sub Title Name</p>
+                <input type="text" name="snippet" class="input-box" required>
+            </div>
+
+            <div class="indivitual">
+                <p class="question">Description of Your Blog</p>
+                <textarea type="text" name="body" class="bigmsg" required></textarea>
+            </div>
+
+            <div>
+                <button type="submit" class="delete" onclick="myfunction()">Submit</button>
+            </div>
+
+        </form>
+    </div> -->
+
+    <script>
+        function myfunction(){
+            alert('Do you want to submit the Blog');
+        }
+    </script>
+
+    
+
+
+
+</body>
+</html>

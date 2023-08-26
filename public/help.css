@@ -1,0 +1,181 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-image: url(images/help-img.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative; 
+  }
+  
+  body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: -1; 
+  }
+  
+  
+  .help {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #145A32 80%, #F9DC5C 20%);
+    color: white;
+    padding: 30px 0;
+    width: 70%; 
+    margin: 0 auto; 
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    margin-top: 150px;
+  }
+  
+  .help:hover {
+    background: linear-gradient(45deg, #1E8449 80%, #F9DC5C 20%);
+  }
+  
+  .help-icon {
+    font-size: 60px;
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .help:hover .help-icon {
+    transform: rotate(45deg);
+  }
+  
+  .help-text {
+    font-size: 18px;
+    font-weight: bolder;
+    line-height: 1.6;
+  }
+  
+  .faq {
+    margin: 50px auto;
+    width: 80%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+  }
+  
+  .faq h2{
+    font-size: 24px;
+    font-weight: bolder;
+  }
+  
+  
+  .faq-item {
+    border-bottom: 3px solid #eee;
+    padding: 20px 0;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .faq-item:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .faq-item h3 {
+    font-size: 20px;
+    color: rgb(0,100,0);
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .faq-item:hover h3 {
+    color: rgb(19, 189, 19);
+  }
+  
+  .faq-item p {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  .contact {
+    padding: 100px 0;
+    text-align: center;
+  }
+  
+  .contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-image img {
+    max-width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-form {
+    width: 45%;
+  }
+  
+  .contact-form h2 {
+    font-size: 34px;
+    font-weight: bolder;
+    color: rgb(0,100,0);
+    margin-bottom: 10px;
+  }
+  .contact-form p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.3;
+  }
+  
+  .contact-form label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block; 
+    text-align: left; 
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .contact-form button {
+        width: 200px;
+        background: rgb(0,100,0);
+        color: #fff;
+        border-radius: 10px;
+        padding: 15px;
+        font-size: medium;
+        font-weight: bold;
+        text-align: center;
+        transition: background-color 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+      opacity: 0.8;
+      background-color: #000000;
+      color: greenyellow;
+  }

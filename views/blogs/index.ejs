@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AgronomyNet-KnowledgeSharing</title>
+        <link rel="stylesheet" href="/kstyles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+
+
+        <section class="home-section">
+            <img src="images/final home img for ks.jpg" alt="Home Image" class="home-bg">
+            <div class="overlay"></div>
+            <div class="home-content">
+                <h1>Welcome to Our Knowledge Exchange Platform.</h1>
+                <p>Engage, Share, and Discover</p>
+                <a href="blogs/createblog" class="home-button">Explore</a>
+            </div>
+            <div class="bottom-row">
+                <div class="bottom-item">
+                    <img src="images/plant science.jpg" alt="Image 1">
+                    <p>Cultivation and Plant Sciences</p>
+                </div>
+                <div class="bottom-item">
+                    <img src="images/animal husbandary.jpg" alt="Image 2">
+                    <p>Livestock and Animal Husbandry</p>
+                </div>
+                <div class="bottom-item">
+                    <img src="images/env stewardship.jpg" alt="Image 3">
+                    <p>Sustainable Practices and Environmental Stewardship</p>
+                </div>
+                <div class="bottom-item">
+                    <img src="images/business.jpg" alt="Image 4">
+                    <p>Business and Community in Agriculture</p>
+                </div>
+            </div>
+
+
+        </section>
+        <div class="end-section">
+            <div class="end-content">
+                <div class="end-inner">
+                    <p>Empower the Green Thumb Within: Craft Your Agriculture Blog</p>
+                    <a href="/blogs/createblog"style="background-color:rgb(38, 175, 38)" class="home-button">Create Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="heading-container">
+            <h1 class="heading">
+                Explore, Learn, Thrive: <span>Embracing Green Horizons</span>
+            </h1>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <img src="images/adaption.jpg" alt="Image 1">
+                <p>Climate Resilience and Adaptation</p>
+            </div>
+            <div class="card">
+                <img src="images/equipment.jpg" alt="Image 1">
+                <p>Farm Equipment and Technology</p>
+            </div>
+            <div class="card">
+                <img src="images/research.jpg" alt="Image 1">
+                <p>Agricultural Research and Innovations</p>
+            </div>
+            <div class="card">
+                <img src="images/personal.jpg" alt="Image 1">
+                <p>Personal Farming Experiences</p>
+            </div>
+            <div class="card">
+                <img src="images/cooking receipie.jpg" alt="Image 1">
+                <p>Cooking and Recipes</p>
+            </div>
+            <div class="card">
+                <img src="images/edu.jpg" alt="Image 1">
+                <p>Educational Resources and Workshops</p>
+            </div>
+        
+            
+        </div>
+
+
+        <section class="featured-section">
+            <h2 class="featured-heading">Share Your Expertise</h2>
+            <div class="featured-content">
+                <div class="icon"><i class="fas fa-lightbulb"></i></div>
+                <p>Join the global agriculture community and contribute to the wealth of knowledge in the field. Whether you're a seasoned farmer, researcher, or enthusiast, share your insights, techniques, and experiences to benefit fellow agriculturists worldwide.</p>
+            </div>
+        </section>
+
+       
+   <div class="heading-container">
+        <h1 id="all-blogs" class="heading">All Blogs</h1>
+   </div>
+
+
+    <div class="three-container">
+        <% if (blogs.length > 0) { %>
+        <div class="row">
+            <% blogs.forEach((blog, index) => { %>
+
+            <div class="border-card" data-doc="<%= blog._id %>">
+
+                    <img src="data:blog/<%=blog.img.contentType%>;base64,
+                    <%=blog.img.data.toString('base64')%>" alt="blog-img">
+
+                    <h3 style="margin: 10px 0; font-size: 20px; color: rgb(0,100,0);"><%= blog.title %></h3>
+                    <p style=" margin: 0; font-size: 14px; color: #000; line-height: 23px;"><%= blog.snippet %></p>
+
+                    <a href="/blogs/<%= blog._id %>"
+                        style="text-decoration: none; width: 100px; background: rgb(0,100,0); color: #fff; border-radius: 10px; padding: 10px; font-size: medium; font-weight: bolder; text-align: center; display: block; transition: opacity 0.3s, background-color 0.3s, color 0.3s;"
+                        onmouseover="this.style.opacity='0.8'; this.style.backgroundColor='#000000'; this.style.color='greenyellow';"
+                        onmouseout="this.style.opacity='1'; this.style.backgroundColor='rgb(0,100,0)'; this.style.color='#fff';">
+                       Read More
+                     </a>
+                     
+
+            </div>
+            
+            <% if ((index + 1) % 3 === 0) { %>
+                </div><div class="row">
+            <% } %>
+            <% }) %>
+        </div>
+        <% } else { %>
+        <p>There are no blogs to display...</p>
+        <% } %>
+    </div>
+  
+
+
+</body>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded' , function(){
+            const anchorLinks = document.querySelectorAll('nav a[href^="#"]');
+            for(let link of anchorLinks){
+                link.addEventListener('click',function(e){
+                    e.preventDefault();
+                    const target =document.querySelector(this.getAttribute('href'));
+                    const offsetTop = target.offsetTop;
+
+                    window.scrollTo({
+                        top:offsetTop,
+                        behavior:'smooth',
+                        duration:100,
+                    });
+                });
+            }
+        });
+    </script>
+
+
+</html>
+

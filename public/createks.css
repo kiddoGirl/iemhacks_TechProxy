@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('images/create\ ks3.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    max-width: 400px; 
+    margin: 0 auto; 
+    margin-bottom: 70px;
+}
+
+.section:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.icon {
+    font-size: 48px;
+    color: #5CB85C;
+    margin-right: 20px;
+}
+
+.content {
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFF;
+}
+
+.form-section {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    margin: 40px;
+    border-radius: 10px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.form-label {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.form-textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    resize: vertical;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.form-button {
+    background-color: #5CB85C;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-button:hover {
+    background-color: #4A984D;
+}
+
+.form-input {
+    position: relative;
+}
+
+.form-input::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+
+#selected-image {
+    width: 90%; 
+    max-height: 400px; 
+    display: none; 
+    margin-top: 15px;
+    margin-bottom: 15px;
+}

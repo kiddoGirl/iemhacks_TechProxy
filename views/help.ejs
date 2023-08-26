@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/help.css">
+    <link rel="stylesheet" href="/nav.css">
+    <title>Help Page</title>
+</head>
+<body>
+
+    <%- include('./partials/nav.ejs') %>  
+
+    <section class="help">
+        <div class="help-icon">
+            <i class="fas fa-question-circle"></i>
+        </div>
+        <div class="help-text">
+            <p>You can clear your questions from this section.</p>
+            <p>If you have any feedback or questions, feel free to ask!</p>
+        </div>
+    </section>
+    <section class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <h3>If I already have an account, what can I do?</h3>
+            <p>If you already have an account, you can log in and explore our platform. Whether you're a farmer, horticulture expert, or greenhouse owner, you can sell your produce to buyers. Buyers can purchase a variety of agricultural products directly from sellers. </p>
+        </div>
+        <div class="faq-item">
+            <h3>Is language translation available on the platform?</h3>
+            <p>Yes, AgronomyNet offers language translation services to help users who may not be fluent in English. You can select your preferred language in your account settings to navigate the platform with ease.</p>
+        </div>
+        <div class="faq-item">
+            <h3>What are the main features of AgronomyNet?</h3>
+            <p>AgronomyNet provides several key features for agricultural stakeholders. These include "Enable Direct Selling," which empowers producers to sell their products directly to consumers. "Weather and Market Updates" offer real-time information for informed decision-making. "Financial Assistance" connects users to loans and regulations. "AI-Powered Agribot" answers agricultural inquiries. The platform also promotes "Knowledge Sharing and Networking" to foster collaboration among professionals.</p>
+        </div>
+        <div class="faq-item">
+            <h3>How can I sell my produce on AgronomyNet?</h3>
+            <p>If you wish to sell your produce, you can create a seller account on AgronomyNet. Once registered, you can list your products with accurate descriptions and images. Buyers interested in your products can then purchase them directly from you.</p>
+        </div>
+        <div class="faq-item">
+            <h3>How can I learn to grow agricultural products?</h3>
+            <p>AgronomyNet encourages knowledge-sharing among users. You can find valuable insights and information through "Knowledge Sharing and Networking." Connect with other farmers and experts to learn about best practices, innovative techniques, and effective cultivation methods.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Where can I access marketing details?</h3>
+            <p>The platform provides "Weather and Market Updates" to help you stay informed about market trends, demands, and conditions. These updates will assist you in making well-informed decisions regarding your produce.</p>
+        </div>
+        <div class="faq-item">
+            <h3>As a consumer, where can I see my order history?</h3>
+            <p>If you're a consumer, you can easily access your order history by logging into your account. The platform keeps a record of your past orders for your convenience.</p>
+        </div>
+        <div class="faq-item">
+            <h3>As a seller, where can I see my order history?</h3>
+            <p>Sellers can view their order history by logging into their accounts. The platform maintains a comprehensive record of your sales transactions.</p>
+        </div>
+        <div class="faq-item">
+            <h3>How can I provide feedback or ask questions?</h3>
+            <p>If you have feedback or questions, we encourage you to reach out to us. You can send an email to <a href="mailto:support@agronymynet.in">support@agronymynet.in</a>. Your input is valuable in helping us improve and serve you better.</p>
+        </div>
+        <div class="faq-item">
+            <h3>What types of produce can I sell on AgronomyNet?</h3>
+            <p>AgronomyNet allows a wide range of agricultural products to be sold. You can list products like vegetables, fruits, grains, and other produce that you grow or cultivate.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Where can I find the available products for sale?</h3>
+            <p>As a buyer, you can explore the available products for sale on the AgronomyNet platform. Browse through the listings and choose the products that meet your preferences.</p>
+        </div>
+    </section>
+
+
+    <section class="contact">
+        <div class="contact-content">
+            <div class="contact-image">
+                <img src="images/contact-us img.jpg" alt="Contact Us Image">
+            </div>
+            <div class="contact-form">
+                <h2>Contact Us</h2>
+                <p>If you have any feedback, questions, or issues, feel free to get in touch with us.</p>
+                <!-- <form  onsubmit="sendEmail(); reset(); return false; " id="contact-form" action="#" method="POST"> -->
+                <form action="#" method="POST">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Enter your feedback, questions, or issues" rows="4" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    
+    
+    
+    
+    <!-- <script src=" https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+
+        function sendEmail(){
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "manjubashini2110@gmail.com",
+                Password : "6D65D579B5464A9EF478B2D069F8D0F61A8By",
+                To : 'lmanjubashini06@gmail.com',
+                From : document.getElementById("email").value,
+                Subject : "New contact Form Enquiry from AgronomyNet",
+                Body : "Name:" + document.getElementById("name").value
+                        + "<br> Email:" + document.getElementById("email").value
+                        + "<br> Message:" + document.getElementById("message").value
+            }).then(
+            message => alert("Message Send Succesfully !!")
+            );
+        }
+
+    </script>
+     -->
+</body>
+</html>
+
+
+

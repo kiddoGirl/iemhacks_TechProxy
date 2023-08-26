@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmHub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/sales.css">
+    <link rel="stylesheet" href="/nav.css">
+</head>
+<body>
+
+    <%- include('./partials/nav.ejs') %>    
+
+    <div class="detailscont">
+
+        <div class="detailsimg">
+            <img src="images/istockphoto-587222274-612x612.jpg">
+        </div>
+
+        <div class="producedetails">
+
+            <h1 style="color: greenyellow;">Fresh Tomato</h1>
+
+            <h1>Produce Information</h1>
+
+            <div class="additionalinfo">
+
+                <div class="infoinrow">
+                    <p class="greenlet">Diet Type</p>
+                    <p class="userlet">Vegetarian</p>
+                </div>
+
+                <div class="infoinrow">
+                    <p class="greenlet">Speciality</p>
+                    <p class="userlet">Natural</p>
+                </div>
+
+                <div class="infoinrow">
+                    <p class="greenlet">Manufacture</p>
+                    <p class="userlet">Natural</p>
+                </div>
+    
+                <div class="infoinrow">
+                    <p class="greenlet">Item From</p>
+                    <p class="userlet">Theni</p>
+                </div>
+    
+                <div class="infoinrow">
+                    <p class="greenlet">Brand</p>
+                    <p class="userlet">Fresh</p>
+                </div>
+    
+                <div class="infoinrow">
+                    <p class="greenlet">Item Weight</p>
+                    <p class="userlet">700 Grams</p>
+                </div>
+    
+                <div class="infoinrow">
+                    <p class="greenlet">Number of Items</p>
+                    <p class="userlet">1</p>
+                </div>
+    
+                <hr>
+    
+    
+            </div>
+    
+            <div class="aboutinfo">
+                <h1>About This Item</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quos veritatis earum fugit maiores dolorum repudiandae, numquam dolore, 
+                    eligendi consectetur doloremque veniam ea consequuntur dolorem id reprehenderit
+                    ad magnam. AutemLorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+                    veritatis earum fugit maiores dolorum repudiandae, numquam dolore, eligendi 
+                    consectetur doloremque veniam ea consequuntur dolorem id reprehenderit ad magnam. 
+                    Autem
+                </p>
+                <hr>
+            </div>
+    
+            <div class="directinfo">
+                <h1>Direct Contact with Saler</h1>
+                <div class="userinfo">
+                    <img src="images/cat1.jpg">
+                    <p>Manju bashini</p>
+                </div>
+
+                <a href="#addtocart">Buy Now</a>
+
+            </div>
+            
+        </div>
+
+        
+
+    </div>
+
+
+    <div class="addtocart" id="addtocart">
+
+        <div class="cartimg">
+            <img src="images/deal-img.jpg">
+        </div>
+
+        <h1>Enter Your details for Deliver</h1>
+
+        <div>
+
+            <form action="#" method="GET" class="cartuserinfo">
+
+                <label for="title">Enter Your Name</label>
+                <input for="text" name="cartusername">
+
+                <label for="title">Enter Your Phone Number</label>
+                <input for="number" name="cartusernumber">
+
+                <label for="title">Enter Your Address</label>
+                <input for="text" name="cartuseraddress">
+
+                <label for="title">Enter Any Land Mark near your Address</label>
+                <input for="title" name="cartuserlandmark">
+
+                <label for="title">How many Quantity You want!?</label>
+                <input for="number" name="cartquantitynumber">
+
+                <label for="title">Enter your UserName in FarmHub for Direct Contact for Tracking Info</label>
+                <input for="text" name="cartuserid">
+
+            </form>
+
+        </div>
+
+        <button type="submit">Submit</button>
+
+    </div>
+
+
+      
+
+    
+</body>
+</html>
