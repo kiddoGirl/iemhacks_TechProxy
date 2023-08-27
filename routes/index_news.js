@@ -5,7 +5,7 @@ const IndexController = require("../controllers/index_controller.js");
 const router = express.Router();
 
 // Index GET routes
-router.get("/agrinews/index", IndexController.HeadLineGet)
+router.get("/", IndexController.HeadLineGet)
 
 
 // Index POST routes

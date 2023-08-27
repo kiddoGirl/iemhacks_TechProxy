@@ -6,27 +6,11 @@ const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const nodemailer = require("nodemailer");
 
-let transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 587, //secure port for modern apps with TLC encryption
-  secure: false, //only true when using 465 port
-  auth: {
-    user: 'binarybeast.coders@gmail.com',
-    pass: 'uejeqhqmsujxuqei'
-  },
-});
-transporter.verify(function(error, success) {
-  if (error) {
-    console.log(error);
-  } else {
-    console.log("Mail Server Check.................ok");
-  }
-});
 
 const SendResetLink = async (mailto, tmpid, tmptoken, userid, tmpname) => {
-  var redirect_link = 'https://bits-e-news.herokuapp.com/auth/reset_password/' + tmpid + '/' + tmptoken + '/' + userid;
+  var redirect_link = '' + tmpid + '/' + tmptoken + '/' + userid;
   let info = await transporter.sendMail({
-    from: 'binarybeast.coders@gmail.com',
+    from: '',
     to: mailto,
     subject: "Authentication Password Reset",
     html: `<div style='background: linear-gradient(#acbac4, #2c3e50);text-align:center' ;>
@@ -91,7 +75,7 @@ const TokenPasswordReset = (id) => {
 
 // GET Auth controller
 const LoginSignupGet = (req, res) => {
-  res.render("login_signup", {
+  res.render("agrinews/login_signup", {
     error: null
   });
 }
@@ -110,7 +94,7 @@ const SignupPost = async (req, res) => {
     res.redirect('/auth/login_signup');
   }).catch((error) => {
     if (error.code == 11000) {
-      res.render("login_signup", {
+      res.render("agrinews/login_signup", {
         error: 'Username Already Exist'
       });
     }
@@ -122,7 +106,7 @@ const LoginPost = async (req, res) => {
     username: userFind.username
   }).lean()
   if (!user) {
-    res.render("login_signup", {
+    res.render("agrinews/login_signup", {
       error: "Username does Not Exist"
     });
   } else {
@@ -133,7 +117,7 @@ const LoginPost = async (req, res) => {
       });
       res.redirect("/user/dashboard");
     } else {
-      res.render("login_signup", {
+      res.render("agrinews/login_signup", {
         error: "Password Incorrect"
       });
     }

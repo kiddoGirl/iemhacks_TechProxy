@@ -428,3 +428,175 @@ section:hover .text-container h2::after  {
         font-size: 0.9rem;
     }
 }
+
+
+@media (max-width: 768px) {
+
+    .img-slider,.body2{
+        height: 40vh;
+    }
+    .img-slider .slide img{
+        z-index: 1;
+        width: 100%;
+        height: 40vh;
+    }
+    
+    .img-slider .slide .info{
+        top: 8%;
+        left: 12%;
+        padding: 15px;
+        width: 80vw;
+    }
+    
+    .img-slider .slide .info h2{
+        font-size: 25px;
+        letter-spacing: 1px;
+    }
+    
+    
+    .img-slider .slide .info p{
+        color: #fff;
+        font-size: 15px;
+        padding: 10px 0px 10px 10px;
+        width: 70vw;
+    }
+    
+    
+    .img-slider .navigation{
+        z-index: 2;
+        position: absolute;
+        display: flex;
+        top: 35vh;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .img-slider .navigation .btn{
+        background:#999;
+        width: 12px;
+        height: 12px;
+        margin: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    #mission,#vision,#goal {
+        padding: 10px 0px 10px 0px;
+    }  
+    #mission:hover,#vision:hover,#goal:hover{
+        box-shadow: none;
+        transform: scale(1);
+    }
+    .icon-container i{
+        font-size: 4rem;
+        margin: 0;
+    }
+    #mission p,#vision p,#goal p{
+        font-size: 15px;
+        width: 60vw;
+    }
+    .text-container h2::after {
+        width: 100px; 
+        left: calc(34% - 100px);
+      }
+    .parent-div section .text-container {
+        flex: 2;
+        padding: 0 0rem;
+    }
+
+    .aim{
+    margin-top: -8vh;
+    }
+
+     .container{
+    margin: 8vh 0px 0px 10vw;
+    padding: 0;
+    height: auto;
+    }
+
+    .container h1{
+    font-size: 40px;
+    }
+    
+    .container .card {
+        width: 75vw;
+        border-radius: 15px;
+    }
+    
+    
+
+    
+    .container .card .img-box {
+        position: absolute;
+        top: 1vh;
+        left: 2vw;
+        height: 15vh;
+        background: none;
+    }
+    
+    .container .card:hover .img-box {
+        top: 1vh;
+        scale: 1;
+        box-shadow: none;
+    }
+    
+    .container .card .img-box img {
+        width: 70vw;
+        border-radius: 5px;
+        height: 100%;
+    }
+    
+    .container .card .content {
+        position: absolute;
+        top: 15vh;
+        left: 0vw;
+        width: 100%;
+        height: 35px;
+        padding: 0 20px;
+        overflow:visible;
+        transition: 0s;
+    }
+    
+    .container .card:hover .content {
+        top: 15vh;
+        height: 35px;
+    }
+    
+    .container .card .content h2 {
+        font-size: 20px;
+        font-weight: 700;
+        width:65vw;
+        margin-top: 10px;
+    }
+    
+    .container .card .content p {
+        margin-top: 10px;
+        text-align: center;
+    }
+    
+    .container .card .content a {
+        position: relative;
+        top: 15px;
+        display: inline-block;
+        padding: 8px 12px ;
+        text-decoration: none;
+        background:rgb(0,100,0);
+        color: white;
+        font-weight: 500;
+    }
+    
+    .container .card .content a:hover {
+        opacity: 0.8;
+        background-color: #000000;
+        color:greenyellow;
+    }
+
+
+
+    .container .card .content p {
+        font-size: 0.65rem;
+    }
+
+    .container .card .content a {
+        font-size: 0.7rem;
+    }
+}

@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  <%- include('../templates/index_navbar.ejs') %>
+  <%- include('index_navbar.ejs') %>
   <section id="home">
     <div class="container">
       <div class="form">
@@ -22,7 +22,7 @@
           <button class="signUpBtn">SIGN UP</button>
           <button class="loginBtn">LOG IN</button>
         </div>
-        <form class="signUp" action="/auth/signup" method="post">
+        <form class="signUp" action="/agrinews/auth/signup" method="post">
           <div class="formGroup">
             <input type="text" id="Name" placeholder="Name" name="name" required autocomplete="off">
           </div>
@@ -47,7 +47,7 @@
           </div>
 
         </form>
-        <form class="login" action="/auth/login" method="post">
+        <form class="login" action="/agrinews/auth/login" method="post">
           <div class="formGroup">
             <input type="text" placeholder="Username" name="username" required autocomplete="off">
           </div>

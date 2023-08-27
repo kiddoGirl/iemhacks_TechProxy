@@ -37,7 +37,7 @@ const app = express();
 //connecting MongoDB
 const dbURI = 'mongodb+srv://manjubashini2110:Manju03@cluster0.adkmyfp.mongodb.net/farmhub-data';
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true})
-    .then((result) => app.listen(4000))
+    .then((result) => app.listen(5000))
     .catch((err) => console.log(err));
 
 
@@ -107,6 +107,16 @@ app.get('/', (req,res) => {
 
 app.get('/about-us', (req,res) => {
     res.render('about-us');
+})
+
+
+app.get('/loan', (req,res) => {
+    res.render('loan');
+})
+
+
+app.get('/crop', (req,res) => {
+    res.render('crop');
 })
 
 
@@ -202,19 +212,6 @@ app.get('/agribot', (req,res) => {
 app.get('/blogs', (req,res) => {
     res.render('blogs/index',{title:'All Blogs',blogs: []});
 })
-
-
-
-
-app.get('/agrinews', (req,res) => {
-    res.render('agrinews/index');
-})
-
-
-
-
-
-
 
 
 
