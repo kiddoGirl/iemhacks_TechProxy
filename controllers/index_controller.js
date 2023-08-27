@@ -24,7 +24,7 @@ const HeadLineGet = async (req, res) => {
         const techNews = await getTopHeadlinesof('technology')
         const businessNews = await getTopHeadlinesof('business')
         const healthNews = await getTopHeadlinesof('health');
-        res.render('index', {
+        res.render('agrinews/index', {
           general: generalNews.articles.slice(0, 10),
           sports: sportsNews.articles.slice(0, 10),
           tech: techNews.articles.slice(0, 10),
@@ -33,7 +33,7 @@ const HeadLineGet = async (req, res) => {
         })
       } catch (err) {
           console.log(err);
-          res.render('index', {
+          res.render('agrinews/index', {
             general: null,
             sports: null,
             tech: null,

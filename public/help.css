@@ -78,6 +78,7 @@ body {
   .faq h2{
     font-size: 24px;
     font-weight: bolder;
+    text-align: center;
   }
   
   
@@ -186,3 +187,30 @@ body {
       background-color: #000000;
       color: greenyellow;
   }
+
+
+
+@media (max-width:768px){
+
+
+  .help {
+
+    width: 80%;
+   
+  }
+
+  .help-icon {
+    
+    margin-left: 20px;
+    
+  }
+
+  .contact-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+
+}

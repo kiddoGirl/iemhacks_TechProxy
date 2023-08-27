@@ -1,7 +1,7 @@
 const express = require("express");
 
 // route controller
-const APIController = require("../controller/api_controller.js");
+const APIController = require("../controllers/api_controller.js");
 const router = express.Router();
 
 // API Authentication routes

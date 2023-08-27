@@ -756,8 +756,50 @@
     margin: 0 auto;
     margin-top: 60px;
     transition: background-color 0.3s ease-in-out;
-  }
+}
 
-  .unique-heading:hover {
+.unique-heading:hover {
     background-color: #3498db; 
-  }
+}
+
+
+@media (max-width: 768px) {
+
+
+    .accountinfo .accntcont {
+        height: 65vh;
+        width: 600px;
+    }
+
+    .accntdetailsrow p {
+        font-weight: bolder;
+        font-size: x-large;
+        width:190px
+    }
+
+    .accntdetailsrow h4 {
+        font-size: x-large;
+        font-weight: bolder;
+        width: 240px;
+    }
+
+
+    .accntdetails {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .accntdetails {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .accntbtns a {
+      margin-left: 50px;
+      margin-bottom: 50px;
+    }
+
+}
+

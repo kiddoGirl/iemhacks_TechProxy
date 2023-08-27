@@ -7,7 +7,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-image: url('/images/chathome.jpg');
+    background-image: url('/images/signinpic.jpg');
     background-size: cover;
   
 }
@@ -117,7 +117,8 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 93%;
+    border-radius: 6px;
+    width: 100%;
 }
 
 .chat-header img{
@@ -142,6 +143,8 @@ body {
     overflow:hidden;
     position:fixed;
     bottom:10px;
+    transform: translateX(-40px); 
+    left: 20%;
 }
 
 
@@ -159,3 +162,44 @@ body {
     transform: rotate(30deg);
 }
 
+
+@media (max-width: 768px) {
+
+    .chat-container {
+        height: 900px;
+    }
+
+    #user-input::placeholder {
+       font-size: larger;
+       font-weight: bolder;
+    }
+
+    #user-input {
+        width: 80%;
+        padding: 14px;
+        font-size: large;
+        font-weight: bold;
+    }
+
+    #send-btn {
+        font-weight: bolder;
+        font-size: larger;
+    }
+
+    .user-message-container {
+        margin-bottom: 20px;
+    }
+    
+      
+    .message {
+        font-size: xx-large;
+        font-weight: bold;
+    }
+
+
+    .chat-btn{
+        left: 50%;
+    }
+
+  
+}
