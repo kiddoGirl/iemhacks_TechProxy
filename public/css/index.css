@@ -1,4 +1,7 @@
-/*Styling for the Landing page section*/
+*{
+  font-family: 'Courier New', Courier, monospace;
+}
+
 
 #home {
   background: url("/img/index/bg.jpeg") no-repeat center center /cover;

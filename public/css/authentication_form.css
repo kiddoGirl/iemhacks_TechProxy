@@ -1,4 +1,7 @@
- /* align items center vertically and horizontally  */
+*{
+  font-family: 'Courier New', Courier, monospace;
+}
+
  .container {
    display: flex;
    justify-content: center;

@@ -73,7 +73,35 @@
 
 
         <li><a href="/about-us"><i class="fas fa-info-circle"></i>About Us</a></li>
-        <li><a href="#"><i class="fas fa-language"></i>Language</a></li>
+
+        <li class="language-dropdown">
+
+            <a href="#"><i class="fas fa-language"></i>Language</a>
+
+            <ul class="lang__menu">
+
+                <li>
+
+                    <div id="google_translate_element"></div>
+
+                    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+                    <script>
+
+                        function googleTranslateElementInit(){
+                            new google.translate.TranslateElement(
+                            {pagelanguage:'en'},'google_translate_element');
+                        }
+
+                    </script>
+
+                </li>
+
+            </ul>
+
+        </li>
+        
+        
         <li class="hover-me"><a href="/login"><i class="fas fa-user"></i>Account</a>
 
 

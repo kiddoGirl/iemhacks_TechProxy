@@ -1,4 +1,8 @@
 /*-------------Reset-------------*/
+*{
+  font-family: 'Courier New', Courier, monospace;
+}
+
 button {
   background: none;
   box-shadow: none;
