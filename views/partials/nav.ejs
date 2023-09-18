@@ -4,7 +4,7 @@
 
         <a href="/" class="logo-link"><img class="logo" src="/images/logofinal.jpg" alt="Logo">AgronomyNet</a>
         <li><a href="/"><i class="fas fa-home"></i>Home</a></li>
-        <li><a href="#"><i class="fas fa-list-alt"></i>Services</a>
+        <li><a href="#"><i class="fas fa-tractor"></i>Services</a>
 
 
         
@@ -24,10 +24,9 @@
 
 
                                 <li><a href="/newsale"><i class="fas fa-plus-circle"></i>New Sale</a></li>
-                                <li><a href="/customer-shopping-history"><i class="fas fa-history"></i>customer shoping history</a></li>
-                                <li><a href="/salers-sales-history"><i class="fas fa-chart-bar"></i>Seller's sales History</a></li>
-                                <li><a href="/salers-orders-history"><i class="fas fa-file-invoice"></i>seller's orders history</a></li>
-                                <li><a href="/account-info"><i class="fas fa-user-circle"></i>Account info</a></li>
+                                <li><a href="/customer-shopping-history"><i class="fas fa-history"></i>shopping history</a></li>
+                                <li><a href="/salers-sales-history"><i class="fas fa-chart-bar"></i>selling History</a></li>
+                                <li><a href="/salers-orders-history"><i class="fas fa-file-invoice"></i>orders got seller</a></li>
 
 
                             </ul>
@@ -38,28 +37,13 @@
                     
                     </li>
 
-                    <li  class="hover-me"><a href="/blogs"><i class="fas fa-users"></i>Connect</a>
-                    
-                    
-                        <div class="sub-menu-2">
-
-
-                            <ul>
-
-                                <li><a href="/account-info"><i class="fas fa-user"></i>Account info</a></li>
-
-
-                            </ul>
-
-
-                        </div>
-                    
-                    
-                    </li>
-
-
+                    <li  class="hover-me"><a href="/blogs/index"><i class="fas fa-users"></i>Connect</a></li>
                     <li><a href="/agribot"><i class="fas fa-robot"></i>AgriBot</a></li>
                     <li><a href="/agrinews/index"><i class="fas fa-newspaper"></i>Agri News</a></li>
+                    <li><a href="/loan"><i class="fas fa-clipboard-check"></i>Agriculture Loan Eligibility Checker</a></li>
+                    <li><a href="/crop"><i class="fas fa-chart-line"></i>Crop Health and Yield Assessment</a></li>
+                    <li><a href="/schemes"><i class="fas fa-leaf"></i>All Indian Schemes</a></li>
+
 
 
                 </ul>
@@ -111,6 +95,8 @@
                 <li><a href="/login"><i class="fas fa-sign-in-alt"></i>Login</a></li>
                 <li><a href="/signup"><i class="fas fa-user-plus"></i>Signup</a></li>
                 <li><a href="/logout"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+                <li><a href="/account-info"><i class="fas fa-user"></i>Account info</a></li>
+                <li><a href="/admin"><i class="fas fa-user-cog"></i>Admin</a></li>
 
 
             </ul>
@@ -121,6 +107,27 @@
         <li><a href="/help"><i class="fas fa-question-circle"></i>Help</a></li>
     </ul>
 
+    <div class="navbar">
+        <div class="notification-icon" id="notification-icon">
+            <span class="badge" id="notification-badge">2</span>
+        </div>
+    </div>
+    
+    <div class="notification-container" id="notification-container">
+        <div class="notification-item">
+            <img src="/images/navlogo.png" alt="Notification Image 1" class="notification-image">
+            <p>You got an order from jessy</p>
+        </div>
+        <div class="notification-item">
+            <img src="/images/navlogo.png" alt="Notification Image 2" class="notification-image">
+            <p>You got an another order from shakthi</p>
+        </div>
+       
+        <button onclick="closeNotification()">Close</button>
+    </div>
+
 </div>
+
+
 
 

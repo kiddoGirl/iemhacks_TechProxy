@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AgronomyNet - Blog Details</title>
+  <link rel="website icon" type="png"  href="/images/logofinal.jpg">
   <link rel="stylesheet" href="/detailsks.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
@@ -22,7 +23,9 @@
     <h2  class="blog-title"><%= blog.title %></h2>
     <p class="blog-content"><%= blog.body %></p>
 
-    <a class="home-button" data-doc="<%= blog._id %>">Delete</a>
+    <a  class="home-button" style="text-decoration: none; width: 150px; background: rgb(0,100,0); color: #fff; border-radius: 10px; padding: 10px; font-size: medium; font-weight: bolder; text-align: center; display: block; transition: opacity 0.3s, background-color 0.3s, color 0.3s; margin-top: 10px; cursor: pointer;"
+    onmouseover="this.style.opacity='0.8'; this.style.backgroundColor='#000000'; this.style.color='greenyellow';"
+    onmouseout="this.style.opacity='1'; this.style.backgroundColor='rgb(0,100,0)'; this.style.color='#fff';" data-doc="<%= blog._id %>">Delete</a>
 
   </div>
   

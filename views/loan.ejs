@@ -3,131 +3,292 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgronomyNet - Loan Approval Prediction</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="styleshet" href="/style.css">
-
-    <style>
-
-        body{
-            background-image: url('/images/about-us img.jpg');
-            background-size: cover;
-            font-family: Arial, sans-serif;
-
-        }
-
-    </style>
+    <title>AgronomyNet - Loan Eligibility Checker</title>
+    <link rel="website icon" type="png"  href="/images/logofinal.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/nav.css">
+    <link rel="stylesheet" href="/loan.css">
 
 
 </head>
-<body >
+
+
+<body>
+
+    <%- include('./partials/nav.ejs') %>    
+
     
-   
-    <div class="container mt-5" style="background-color:rgb(0,0,0,0.3);width:650px;height:1080px;border-radius:20px;">
+
+    <div class="container">
+
+        <h1>Agriculture Loan Eligibility Checker</h1>
+
+        <form id="loanForm">
 
 
-        <h1 class="mb-4"style=" text-align:center;color:greenyellow;font-size:30px;" ><strong>LOAN APPROVAL PREDICTION</strong></h1>
+            <div class="column">
 
 
-        <form>
+                <label for="loanPurpose">Loan Purpose</label>
+                <select id="loanPurpose" name="loanPurpose">
+                    <option value="seedsAndFertilizers">Purchase of Seeds and Fertilizers</option>
+                    <option value="machinery">Investment in Machinery or Farming Equipment</option>
+                    <option value="expansion">Expansion of Farming Activities</option>
+                </select>
 
 
-            <div class="mb-3">
-                <label for="applicantName" class="form-label" style="color:white"><strong>Gender:</strong></label>
-                <input type="text" class="form-control" style="width:600px;"id="applicantName" placeholder="Select Gender" required>
-            </div>
+                <label for="loanType">Type of Loan</label>
+                <select id="loanType" name="loanType">
+                    <option value="cropLoan">Crop Loan</option>
+                    <option value="mechanizationLoan">Farm Mechanization Loan</option>
+                    <option value="termLoan">Term Loan</option>
+                </select>
 
 
 
-            <div class="mb-3">
-                <label for="cropType" class="form-label"style="color:white"><strong>Marital Status:</strong></label>
-                <input type="text" class="form-control" style="width:600px;"id="applicantName" placeholder="Select Marital Status" required>
+                <label for="lender">Lender</label>
+                <select id="lender" name="lender">
+                    <option value="publicSectorBank">Public Sector Bank</option>
+                    <option value="privateBank">Private Bank</option>
+                    <option value="cooperativeBank">Cooperative Bank</option>
+                </select>
+
+
+
+                <label for="income">Income (per year in INR)</label>
+                <input type="number" id="income" name="income" required>
+
                 
-            </div>
-
-
-
-            <div class="mb-3">
-                <label for="cropType" class="form-label"style="color:white"><strong>No of Dependents:</strong></label>
-                <input type="number" class="form-control" style="width:600px;"id="applicantName" placeholder="People dependenton your income " required>
+                <label for="farmingExperience">Farming Experience (in years)</label>
+                <input type="number" id="farmingExperience" name="farmingExperience" required>
                 
-            </div>
-
-
-
-            <div class="mb-3">
-                <label for="cropType" class="form-label"style="color:white"><strong>Educaion Level:</strong></label>
-                <input type="text" class="form-control" style="width:600px;"id="applicantName" placeholder="Select education" required>
-                
-            </div>
-
-
-
-            <div class="mb-3">
-                <label for="cropType" class="form-label"style="color:white"><strong>Are you self Employed?</strong></label>
-                <input type="text" class="form-control" style="width:600px;"id="applicantName" placeholder="Self Employed Status" required>
             
 
+            </div>
 
 
-            </div> <div class="mb-3">
-                <label for="cropType" class="form-label"style="color:white"><strong>Enter your income:</strong></label>
-                <input type="number" class="form-control" style="width:600px;"id="applicantName" placeholder="" required>
+
+            <div class="column">
+
+            
+
+                <label for="creditScore">Credit Score:</label>
+                <select id="creditScore" name="creditScore" required>
+                    <option value="">Select Credit Score Range</option>
+                    <option value="800-850">Excellent: 800-850</option>
+                    <option value="740-799">Very Good: 740-799</option>
+                    <option value="670-739">Good: 670-739</option>
+                    <option value="580-669">Fair: 580-669</option>
+                    <option value="300-579">Poor: 300-579</option>
+                </select>
+
+
+
+                <label for="loanAmount">Loan Amount (in INR)</label>
+                <input type="number" id="loanAmount" name="loanAmount" required>
+
+
+
+                <label for="loanTerm">Loan Term (in months)</label>
+                <input type="number" id="loanTerm" name="loanTerm" required>
+
+
+
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" required>
                 
+
+
+                <label for="Gender">Gender</label>
+                <select id="Gender" name="Gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Transgender">Transgender</option>
+                </select>
+
+
             </div>
 
+            
 
-
-            <div class="mb-3">
-                <label for="cropType" class="form-label"style="color:white"><strong>Enter your partner/co-applicant income:</strong></label>
-                <input type="number" class="form-control" style="width:600px;"id="applicantName" placeholder="" required>
-                
-            </div>
-
-
-
-            <div class="mb-3">
-                <label for="loanAmount" class="form-label"style="color:white"><strong> Enter Loan Amount</strong></label>
-                <input type="number" class="form-control" style="width:600px;"id="loanAmount" placeholder="Enter loan amount" required>
-            </div>
-
-
-
-            <div class="mb-3">
-                <label for="loanTerm" class="form-label"style="color:white"><strong>Enter term of loan in months:</strong></label>
-                <input type="number" class="form-control"style="width:600px;" id="loanTerm" placeholder="Enter loan term" required>
-            </div>
-
-
-
-            <div class="mb-3">
-                <label for="cropType" class="form-label"style="color:white"><strong>Status of credit:</strong></label>
-                <input type="text" class="form-control" style="width:600px;"id="applicantName" placeholder="Any dues left or complted?" required>
-                
-            </div>
-
-
-
-            <div class="mb-3">
-                <label for="cropType" class="form-label"style="color:white"><strong>Type of area of property:</strong></label>
-                <input type="text" class="form-control" style="width:600px;"id="applicantName" placeholder="property Area Type" required>
-                
-            </div>
-
-
-
-            <button type="submit" class="btn " style="margin-top:10px;background-color:rgb(0,100,0);">Submit</button>
+            <button type="submit">Check Eligibility</button>
 
 
         </form>
+        
 
+        <div id="result"></div>
 
     </div>
 
 
 
-   
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+    <div class="containers">
+
+
+        <div class="section">
+
+
+            <div class="section-title">Agriculture Loan Guidance</div><br>
+
+
+            <div class="section-content">
+                
+               <strong>Understand Your Loan Purpose</strong>
+                <ul>Determine the specific purpose of your agricultural loan, whether it's for purchasing seeds and fertilizers, investing in machinery, or expanding farming activities.</ul>
+
+
+                <strong>Select the Right Loan Type</strong>
+                <ul>Choose the type of agriculture loan that aligns with your needs. Common types include crop loans, farm mechanization loans, and term loans.</ul>
+
+
+                <strong>Choose the Lender</strong>
+                <ul>Explore different lenders such as public sector banks, private banks, and cooperative banks. Compare interest rates, terms, and conditions to select the most suitable one.</ul>
+
+
+                <strong>Assess Your Financial Situation</strong>
+                <ul>Calculate your income, expenses, and cash flow to determine your repayment capacity. Lenders will evaluate your financial stability when considering your loan application.</ul>
+
+
+                <strong>Prepare Documentation</strong>
+                <ul>Gather essential documents like proof of land ownership, income proof, and identification. Ensure that all required documentation is in order.</ul>
+
+
+                <strong>Credit Score Check</strong>
+                <ul>Check your credit score, as it plays a crucial role in loan approval. A good credit score can improve your chances of securing the loan.</ul>
+
+
+                <strong>Farming Experience</strong>
+                <ul>Highlight your farming experience, as lenders often prefer borrowers with prior experience in agriculture.</ul>
+ 
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+        <div class="section">
+
+
+            <div class="section-title">Agriculture Loan Criteria</div><br>
+
+
+            <div class="section-content">
+
+
+                <strong>Eligibility Criteria</strong>
+                <ul>Borrowers typically need to be at least 18 years old to qualify for an agricultural loan.</ul>
+
+
+                <strong>Credit Score</strong>
+                <ul>A satisfactory credit score is necessary for loan approval. A higher credit score indicates lower credit risk.</ul>
+
+
+
+                <strong>Land Ownership</strong>
+                <ul>Proof of land ownership or a lease arrangement with the landowner is required for eligibility.</ul>
+
+
+
+                <strong>Income</strong>
+                <ul>Your income will be considered by lenders when determining your ability to repay the loan. A higher income often leads to better loan terms.</ul>
+
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <div class="section">
+
+
+            <div class="section-title">How to Apply for an Agriculture Loan</div><br>
+
+
+            <div class="section-content">
+
+
+
+                
+                <strong>Choose Your Loan Purpose</strong>
+                <ul>Clearly define the purpose of your loan, whether it's for purchasing agricultural inputs, machinery, or expanding your farming activities.</ul>
+
+
+
+
+                <strong>Select the Loan Type</strong>
+                <ul>Based on your purpose, choose the appropriate loan type, such as crop loans, farm mechanization loans, or term loans.</ul>
+
+
+
+
+                <strong>Pick a Lender</strong>
+                <ul>Research and compare different lenders to find the one offering the best terms and interest rates for your agricultural loan.</ul>
+
+
+
+
+                <strong>Prepare Documentation</strong>
+                <ul>Collect and organize all required documents, including proof of land ownership, income documents, identification, and any other paperwork requested by the lender.</ul>
+
+
+
+
+                <strong>Submit the Application</strong>
+                <ul>Visit the chosen lender's branch or apply online through their website. Fill out the loan application form and submit it along with the necessary document</ul>
+
+
+
+                <strong>Verification and Evaluation</strong>
+                <ul>The lender will review your application and documents, conduct credit checks, and assess your eligibility based on their criteria.</ul>
+
+
+
+
+                <strong>Loan Approval</strong>
+                <ul>Once your application is approved, the lender will provide you with the loan terms and conditions, including the interest rate, repayment schedule, and loan amount.</ul>
+
+
+
+
+                <strong>Acceptance and Disbursement</strong>
+                <ul>If you agree to the terms, sign the loan agreement, and the funds will be disbursed to your account or as specified in the agreement.</ul>
+
+
+
+
+                <strong>Repayment</strong>
+                <ul>Make timely repayments according to the agreed schedule. Failure to do so can result in penalties and affect your credit score.</ul>
+
+
+
+                <strong>Monitoring and Support</strong>
+                <ul>Stay in touch with your lender, and if you encounter any issues, seek assistance or guidance to ensure a smooth loan repayment process.</ul>
+
+
+                    
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+    <script src="/script/loan.js"></script>
+
 
 
 </body>

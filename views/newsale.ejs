@@ -2,43 +2,59 @@
 <html>
 
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AgronomyNet - New sale</title>
+    <link rel="website icon" type="png"  href="images/logofinal.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="/newsale.css">
     <link rel="stylesheet" href="/nav.css">
+    
 </head>
 
 <body>
 
 
-     
+  <%- include('./partials/nav.ejs') %>  
+   
+
+  <form class="produce-info-form" action="/newsale" method="POST" enctype="multipart/form-data">
 
 
-  <form class="produce-info-form" action="/greenmarket" method="POST">
-    
-    
-        <label for="image">Image of the Produce</label>
-        <input type="file" id="image" name="image" accept="image/*" required>
-        <img id="previewImage" src="#" alt="Preview" style="display: none;">
+    <div class="form-row">
+      
 
+      <div class="form-column">
 
         <label for="produceName">Produce Name</label>
         <input type="text" id="produceName" name="produceName" required>
 
+      </div>
 
+
+
+
+      <div class="form-column">
 
         <label for="produceQuantity">Produce Quantity</label>
         <input type="number" id="produceQuantity" name="produceQuantity" required>
 
+      </div>
+
+      
+  
+     
+    </div>
 
 
-        <label for="produceAmount">Produce Amount</label>
-        <input type="number" id="produceAmount" name="produceAmount" required>
 
-
+  
+    <div class="form-row">
+     
+      
+      <div class="form-column">
 
         <label for="dietType">Diet Type</label>
         <select id="dietType" name="dietType" required>
@@ -51,83 +67,137 @@
           <option value="Greenhouse Produce">Greenhouse Produce</option>
         </select>
 
+      </div>
+
+  
+      <div class="form-column">
+
+        <label for="produceAmount">Produce Amount</label>
+        <input type="number" id="produceAmount" name="produceAmount" required>
+
+      </div>
 
 
 
-        <label for="speciality">Speciality</label>
-        <input type="text" id="speciality" name="speciality" required>
+    </div>
 
 
 
+
+  
+    <div class="form-row">
+      
+      
+      <div class="form-column">
 
         <label for="manufacture">Manufacture</label>
         <input type="text" id="manufacture" name="manufacture" required>
 
+      </div>
 
 
-        <label for="itemFrom">Item From</label>
-        <input type="text" id="itemFrom" name="itemFrom" required>
+  
+      <div class="form-column">
+
+        <label for="speciality">Speciality</label>
+        <input type="text" id="speciality" name="speciality" required>
+
+      </div>
 
 
 
+    </div>
+
+
+
+  
+    <div class="form-row">
+      
+      <div class="form-column">
 
         <label for="brand">Brand</label>
         <input type="text" id="brand" name="brand" required>
 
+      </div>
+
+  
+      <div class="form-column">
+
+        <label for="itemFrom">Item From</label>
+        <input type="text" id="itemFrom" name="itemFrom" required>
+
+      </div>
 
 
-        <label for="itemWeight">Item Weight</label>
-        <input type="text" id="itemWeight" name="itemWeight" required>
+    </div>
 
 
 
+  
+    <div class="form-row">
+     
+      <div class="form-column">
 
         <label for="numberOfItems">Number of Items</label>
         <input type="number" id="numberOfItems" name="numberOfItems" required>
 
+      </div>
+  
 
+
+      <div class="form-column">
+
+        <label for="itemWeight">Item Weight</label>
+        <input type="text" id="itemWeight" name="itemWeight" required>
+
+      </div>
+
+
+    </div>
+
+
+
+  
+    <div class="form-row">
+      
+
+      <div class="form-column">
+
+        <label for="image">Image of the Produce</label>
+        <input type="file" id="image" name="image" accept="image/*" required>
+        <img id="previewImage" src="#" alt="Preview" style="display: none;">
+
+      </div>
+
+
+  
+      <div class="form-column">
 
         <label for="aboutItem">About This Item Description</label>
         <textarea id="aboutItem" name="aboutItem" rows="4" required></textarea>
 
+      </div>
+
+    </div>
 
 
-        <label for="userNameFarmHub">User Name in AgronomyNet for Contact</label>
-        <input type="text" id="userNameFarmHub" name="userNameFarmHub" required>
+  
+    <div class="center-button">
 
+      <button class="Submit-btn">Submit</button>
 
-
-        <a class="Submit-btn" href="/greenmarket">Submit</a>
+    </div>
 
 
 
   </form>
+  
 
 
 
-  <script>
+  <script src="/script/previewimg.js"></script>
 
-        
-        function previewImage(event) {
-        const input = event.target;
-        const previewImage = document.getElementById('previewImage');
-
-        if (input.files && input.files[0]) {
-            const reader = new FileReader();
-
-            reader.onload = function (e) {
-            previewImage.src = e.target.result;
-            previewImage.style.display = 'block';
-            };
-
-            reader.readAsDataURL(input.files[0]);
-        }
-        }
-
-        const imageInput = document.getElementById('image');
-        imageInput.addEventListener('change', previewImage);
-
-  </script>
+ 
 
   
 

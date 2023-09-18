@@ -19,26 +19,18 @@ const getEverything = (query) => {
 // Index page headlines
 const HeadLineGet = async (req, res) => {
     try {
-        const generalNews = await getTopHeadlinesof('general')
-        const sportsNews = await getTopHeadlinesof('sports')
-        const techNews = await getTopHeadlinesof('technology')
-        const businessNews = await getTopHeadlinesof('business')
-        const healthNews = await getTopHeadlinesof('health');
+        const agricultureNews = await getEverything('agriculture') 
+        const marketNews = await getEverything('market') 
+
         res.render('agrinews/index', {
-          general: generalNews.articles.slice(0, 10),
-          sports: sportsNews.articles.slice(0, 10),
-          tech: techNews.articles.slice(0, 10),
-          business: businessNews.articles.slice(0, 10),
-          health: healthNews.articles.slice(0, 10)
+          agriculture: agricultureNews.articles.slice(0, 10),
+          market: marketNews.articles.slice(0, 10),
         })
       } catch (err) {
           console.log(err);
           res.render('agrinews/index', {
-            general: null,
-            sports: null,
-            tech: null,
-            business: null,
-            health: null
+            agriculture: null,
+            market: null,
         })
     }
 }

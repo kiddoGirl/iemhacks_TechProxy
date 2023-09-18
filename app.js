@@ -15,6 +15,8 @@ const { requireAuth } = require('./middleware/authMiddleware');
 //Routering 
 const authRoutes = require('./routes/authRoutes'); 
 
+const createproduceAuthRoutes = require('./routes/createproduceAuthRoutes');
+
 const blogRoutes = require('./routes/blogRoutes'); 
 
 const AuthenticationRoute = require('./routes/authentication.js');
@@ -97,6 +99,53 @@ app.post('/blogs/index', upload.single('image'), async(req, res, next) => {
 
 
 
+// app.post('/greenmarket', upload.single('image'), async(req, res, next) => {
+//     console.log(req.file);
+//     var obj = {
+//         produceName: req.body.produceName,
+//         produceQuantity: req.body.produceQuantity,
+//         produceAmount: req.body.produceAmount,
+//         dietType: req.body. dietType,
+//         speciality: req.body.speciality,
+//         manufacture: req.body.manufacture,
+//         itemFrom: req.body.itemFrom,
+//         brand: req.body.brand,
+//         itemWeight: req.body.itemWeight,
+//         numberOfItems: req.body.numberOfItems,
+//         aboutItem: req.body.aboutItem,
+//         userNameFarmHub: req.body.userNameFarmHub,
+//         image: {
+//             data: fs.readFileSync(path.join(__dirname + '/uploads/' + req.file.filename)),
+//             contentType: 'image/png'
+//         }
+//     }
+//     await Produce.create(obj)
+//     .then ((err, item) => {
+//         res.redirect('greenmarket');  
+//     });
+   
+// });
+
+
+
+
+
+//Routering operation
+
+app.use(authRoutes);  // login authentication route
+
+app.use(blogRoutes); //knowledge sharing route
+
+app.use(createproduceAuthRoutes); //newsale route
+
+app.use('/agrinews/auth', AuthenticationRoute) // Authentication Route in Whether,market AgriNews
+
+app.use('/agrinews/index', IndexRoute) //Index Route
+
+app.use('/agrinews/user', UserRoute) //User Route
+
+app.use('/agrinews/api', APIRoute) //API Route 
+
 
 
 app.get('/', (req,res) => {
@@ -115,30 +164,29 @@ app.get('/loan', (req,res) => {
 })
 
 
+app.get('/admin', (req,res) => {
+    res.render('admin');
+})
+
+
 app.get('/crop', (req,res) => {
     res.render('crop');
 })
 
 
-
-app.get('/greenmarket', (req,res) => {
-    res.render('greenmarket');
+app.get('/chatpage', (req,res) => {
+    res.render('chatpage');
 })
 
 
+app.get('/chatpage2', (req,res) => {
+    res.render('chatpage2');
+})
 
 
 app.get('/get-details-from-user', (req,res) => {
     res.render('get-details-from-user');
 })
-
-
-
-
-app.get('/newsale', (req,res) => {
-    res.render('newsale');
-})
-
 
 
 
@@ -209,25 +257,17 @@ app.get('/agribot', (req,res) => {
 
 
 
+app.get('/schemes', (req,res) => {
+    res.render('schemes');
+})
+
+
+
 app.get('/blogs', (req,res) => {
     res.render('blogs/index',{title:'All Blogs',blogs: []});
 })
 
 
-
-//Routering operation
-
-app.use(authRoutes);  // login authentication route
-
-app.use('/blogs',blogRoutes); //knowledge sharing route
-
-app.use('/agrinews/auth', AuthenticationRoute) // Authentication Route in Whether,market AgriNews
-
-app.use('/agrinews/index', IndexRoute) //Index Route
-
-app.use('/agrinews/user', UserRoute) //User Route
-
-app.use('/agrinews/api', APIRoute) //API Route 
 
 
 

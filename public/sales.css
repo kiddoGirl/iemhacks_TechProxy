@@ -152,9 +152,59 @@
     text-transform: capitalize; 
 }
 
+.rating-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.rating-section h1 {
+    font-size: 20px;
+    color: rgb(0, 100, 0);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.rating-stars-container{
+    font-size: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    
+}
+
+.rating-stars-container .fa-star {
+    color: lightcoral;
+}
+
+.rating-stars-container .checked {
+    color: gold;
+}
+
+.rating-stars-container .unchecked:hover {
+    color: gold;
+}
+
 .productinfo{
     display: flex;
     flex-direction: column;
+    position: relative;
+}
+
+.rating {
+    position: absolute;
+    left: 170px;
+    top:310px;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.fa-star {
+    color: orange;
+}
+
+.checked {
+    color: gold;
 }
 
 .productinfo img{
@@ -270,6 +320,17 @@
     margin-top: 10px;
 }
 
+.aboutinfo a{
+    background-color: rgb(0, 100, 0);
+    margin-top: 10px;
+    padding: 10px;
+    text-decoration: none;
+    width: 150px;
+    color: #ccc;
+    font-size: large;
+    font-weight: bold;
+}
+
 .aboutinfo p{
     width: 500px;
     height: auto;
@@ -335,96 +396,155 @@
     margin-bottom: 20px;
 }
 
-.addtocart{
-    background-color:rgb(238, 232, 232);
-    margin: auto;
-    width: 1000px;
-    height: auto;
-    padding: 20px 30px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    border-radius: 10px;
-    display: none;
-    opacity: 0;
-    transition: opacity 3s ease; 
-}
-
-.cartimg{
-    width: 900px;
-    height: 400px;
-    margin: auto;
-    margin-bottom: 30px;
-}
-
-.cartimg img{
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    object-fit: cover;
-}
-
-.addtocart h1{
-    color: rgb(0,100,0);
-    font-size: 45px;
-    font-weight: bolder;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 20px; 
-}
-
-.cartuserinfo{
-    display: flex;
-    flex-direction: column;
-    padding: 10px 40px;
-    width: 900px;
-}
-
-.cartuserinfo label{
-    font-size: large;
-    font-weight: bolder;
-    width: 500px;
-    margin-bottom: 20px;
-    margin-top: 20px;
-}
-
-.cartuserinfo input{
-    width: 550px;
-    padding: 13px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-}
-
-.cartuserinfo input:focus{
-    outline: none; 
-    border-color: green; 
-    box-shadow: 0 0 4px green; 
-}
-
-.addtocart button{
-    align-items: center;
-    margin: 10px;
-    width: 150px;
-    text-align: center;
-    padding: 15px;
-    color: #fff;
-    background: rgb(0,100,0);
-    font-size: larger;
-    font-weight: bolder;
-    border: none;
-    margin-top: 20px;
-}
-
-.addtocart button:hover{
-    opacity: 0.8;
-    background-color: #000000;
-    color: greenyellow;
-}
 
 .addtocart:target{
     display:block;
     opacity: 1;
 }
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.message-box {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.message-box p{
+    color: #000;
+    font-weight: bolder;
+}
+
+.close-btn {
+    background-color: rgb(0,100,0);
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    font-weight: bolder;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 20px; 
+}
+
+.close-btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+
+.center-content {
+    text-align: center;
+    margin-bottom: 30px;
+    color: greenyellow;
+}
+
+.center-content button{
+    background-color: rgb(0, 100, 0);
+    font-size: large;
+    font-weight: bolder;
+    margin-top: 20px;
+}
+
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+}
+
+.form-container label{
+    font-weight: bold;
+}
+
+
+.cartuserinfo {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.form-column {
+    flex: 0 0 calc(33.33% - 20px); 
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.large-image {
+    max-width: 300px; 
+    max-height: 300px; 
+}
+
+
+
+.cartuserinfo label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.cartuserinfo input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+
+#submitBtn {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#submitBtn:hover {
+    background-color: #222;
+}
+
+.addtocart{
+    max-width: 1000px; 
+    margin: 0 auto;
+    padding: 30px;
+    background-image: url('/images/loan home 3.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center center; 
+    color: #fff; 
+    display: none;
+}
+
+.cartuserinfo input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
 
 
 .agriculture-card-container {
@@ -488,62 +608,118 @@
     }
 }
 
-.user-info-container {
-    max-width: 500px;
-    margin: 50px auto;
-    background:rgb(0,100,0);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    display: none;
-    opacity: 0;
-    transition: opacity 3s ease; 
-}
-
-.user-info-item {
-    margin-bottom: 25px;
-}
-
-.user-info-item:last-child {
-    margin-bottom: 0;
-}
-
-.user-info-label {
-    font-weight: bolder;
-    font-size: large;
-    color:greenyellow;
-}
-
-.user-info-value {
-    margin-top: 8px;
-}
-
-.user-info-value span {
-    font-weight: bold;
-    color: #ffffff;
-}
-
-.user-info-value .user-answer {
-    font-weight: bold;
-    color: #ffffff;
-}
-
-.user-info-value .user-id {
-    color: #ff9800;
-}
 
 .user-info-container:target{
     opacity: 1;
     display: block;
 }
 
-.user-info-container h1{
-    margin-bottom: 20px;
-    margin-top: 20px;
-    text-align: center;
-    font-size: 30px;
+.user-info-container {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center; 
+    background-image: url('/images/sbg.jpg');
+    max-width: 1000px; 
+    margin: 0 auto;
+    padding: 30px;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center center; 
+    color: #fff; 
+    display: none;
+}
+  
+  
+.user-info-item {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center; 
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px; 
+    width: 100%; 
+    max-width: 600px;
+    padding: 10px;
+}
+  
+  
+.user-info-label {
+    font-weight: bolder;
+    width: 50%; 
+    font-size:large;
+    color: greenyellow;
+    text-align: left;
+}
+  
+  
+.user-info-value {
+   flex-grow: 2; 
+   text-align: left; 
+   width: 50%; 
+}
+  
+  
+.user-answer {
+    font-weight: normal;
+    padding: 15px;
+    line-height: 25px;
+    flex-grow: 3;
+    color: #fff;
+    font-size: large;
     font-weight: bolder;
 }
+  
+  
+.directinfo1 {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center; 
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: transform 0.2s ease-in-out;
+}
+  
+.directinfo1:hover{
+    transform: scale(1.05);
+}
+  
+.directinfo1 h1{
+    color: greenyellow;
+}
+   
+.userinfo1 {
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    margin-top: 10px;
+    text-align: center; 
+}
+  
+.userinfo1 img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+  
+.userinfo1 p {
+    font-weight: bolder;
+    margin: 0;
+    font-size: large;
+}
+  
+.black{
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 80%;
+    margin: 0 auto;
+} 
+
 
 .greenmarketh1{
     font-weight: bolder;
@@ -574,7 +750,7 @@
     width: 300px;
     margin: 10px;
     cursor: pointer;
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out; /* Add transition for background color */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out; 
 }
   
 .container-row .full-width {
@@ -659,7 +835,7 @@
 .accountinfo .accntcont{
     background: #fff;
     width: 500px;
-    height: 90vh;
+    height: 99vh;
     align-items: center;
     justify-content: center;
     border-radius: 20px;
@@ -675,8 +851,8 @@
 }
 
 .accntprofile img{
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     margin: auto;
     align-items: center;
@@ -688,7 +864,7 @@
     font-weight: bolder;
     color:rgb(0, 100, 0);
     text-align: center;
-    margin: 10px auto;
+    margin: 5px auto;
 }
 
 .accntdetails{

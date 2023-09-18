@@ -126,14 +126,14 @@
 
 .container .card .content h2 {
     font-size: 1.2rem;
-    font-weight: 700;
+    font-weight:bolder;
     color: rgb(0,100,0);
     margin-top: 10px;
 }
 
 .container .card .content p {
     color: #333;
-    font-weight: bolder;
+    font-weight: 900;
     margin-top: 10px;
     text-align: center;
 }
@@ -201,7 +201,7 @@
     top: 30%;
     left: 25%;
     padding: 15px 30px;
-    background: rgba(0, 0, 0, 0.315);
+    background-color: rgba(0, 0, 0, 0.5); 
     width: 50%;
     border-radius: 5px;
     text-align: center;
@@ -409,26 +409,6 @@ section:hover .text-container h2::after  {
 
 
 
-@media (max-width: 480px) {
-    .container .card {
-        width: 230px;
-        border-radius: 15px;
-    }
-
-    .container .card .img-box {
-        width: 185px;
-        border-radius: 10px;
-    }
-
-    .container .card .content p {
-        font-size: 0.8rem;
-    }
-
-    .container .card .content a {
-        font-size: 0.9rem;
-    }
-}
-
 
 @media (max-width: 768px) {
 
@@ -440,28 +420,22 @@ section:hover .text-container h2::after  {
         width: 100%;
         height: 40vh;
     }
-    
     .img-slider .slide .info{
         top: 8%;
         left: 12%;
         padding: 15px;
         width: 80vw;
     }
-    
     .img-slider .slide .info h2{
         font-size: 25px;
         letter-spacing: 1px;
     }
-    
-    
     .img-slider .slide .info p{
         color: #fff;
         font-size: 15px;
         padding: 10px 0px 10px 10px;
         width: 70vw;
     }
-    
-    
     .img-slider .navigation{
         z-index: 2;
         position: absolute;
@@ -470,7 +444,6 @@ section:hover .text-container h2::after  {
         left: 50%;
         transform: translateX(-50%);
     }
-    
     .img-slider .navigation .btn{
         background:#999;
         width: 12px;
@@ -504,13 +477,13 @@ section:hover .text-container h2::after  {
     }
 
     .aim{
-    margin-top: -8vh;
+      margin-top: -8vh;
     }
 
-     .container{
-    margin: 8vh 0px 0px 10vw;
-    padding: 0;
-    height: auto;
+    .container{
+        margin: 8vh 0px 0px 10vw;
+        padding: 0;
+        height: auto;
     }
 
     .container h1{
@@ -521,9 +494,6 @@ section:hover .text-container h2::after  {
         width: 75vw;
         border-radius: 15px;
     }
-    
-    
-
     
     .container .card .img-box {
         position: absolute;
@@ -599,4 +569,28 @@ section:hover .text-container h2::after  {
     .container .card .content a {
         font-size: 0.7rem;
     }
+}
+
+
+@media (max-width: 480px) {
+
+    .container .card {
+        width: 230px;
+        border-radius: 15px;
+    }
+
+    .container .card .img-box {
+        width: 185px;
+        border-radius: 10px;
+    }
+
+    .container .card .content p {
+        font-size: 0.8rem;
+    }
+
+    .container .card .content a {
+        font-size: 0.9rem;
+    }
+
+
 }

@@ -4,7 +4,8 @@
 
 
 #home {
-  background: url("/img/index/bg.jpeg") no-repeat center center /cover;
+  background: url("/images/about-us img.jpg") no-repeat center center /cover;
+  margin-top: 100px;
 }
 
 .main-index {
@@ -16,13 +17,12 @@
 }
 
 .main-index div:nth-child(1) {
-  padding: 50px;
-  background-color: rgb(0,100,0,0.7);
+  padding: 30px;
+  background-color: rgba(0,0,0,0.4);
 }
 
 .main-index div:nth-child(1) a {
   color: white;
-  background: #000000;
   background: -webkit-linear-gradient(45deg, rgb(0, 100, 0), rgb(0, 80, 0));
   background: linear-gradient(45deg, rgb(0, 100, 0), rgb(0, 80, 0));
 }
@@ -46,6 +46,41 @@
   text-align: center;
   color: red;
 }
+
+.each-row{
+  background-color: rgb(216, 216, 216);
+  padding: 10px;
+}
+
+.edit h2,p{
+  color: rgb(0, 100, 0);
+  font-weight: bold;
+}
+
+.edit:hover h2:hover,p:hover {
+ 
+  text-decoration: none; 
+}
+
+.nav-item a{
+  color:rgb(0, 100, 0);
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+
+.nav-item:hover{
+  background-color: rgb(181, 253, 181);
+  color: greenyellow;
+  transition: 0.3s;
+  transform: scale(1.025);
+}
+
+.nav-item:active{
+  color: greenyellow;
+}
+
+
 
 /*Styling for the news category page section*/
 .tile{

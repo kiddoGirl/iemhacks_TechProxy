@@ -33,31 +33,6 @@
     line-height: 30px;
 }
 
-.delete-button {
-    background-color: #FF6347;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-.home-button{
-    text-decoration: none;
-    width: 100px;
-    background: rgb(0,100,0);
-    color: #fff;
-    border-radius: 10px;
-    padding: 15px;
-    font-size: medium;
-    font-weight: bolder;
-    text-align: center;
-}
-
-.home-button:hover{
-    opacity: 0.8;
-    background-color: #000000;
-    color: greenyellow;
-}
 
 
 

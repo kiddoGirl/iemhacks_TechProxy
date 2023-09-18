@@ -7,12 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AgronomyNet - KnowledgeSharing</title>
+    <link rel="website icon" type="png"  href="/images/logofinal.jpg">
     <link rel="stylesheet" href="/kstyles.css">
+    <link rel="stylesheet" href="/nav.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
 </head>
 
 <body>
+
+
+    <%- include('../partials/nav.ejs') %>  
 
 
     <section class="home-section">
@@ -117,7 +122,7 @@
 
             <div class="card">
 
-                <img src="images/research.jpg" alt="Image 1">
+                <img src="/images/research.jpg" alt="Image 1">
                 <p>Agricultural Research and Innovations</p>
 
             </div>
@@ -179,6 +184,7 @@
 
         <div class="three-container">
 
+        
             <% if (blogs.length > 0) { %>
 
                 <div class="row">
@@ -187,6 +193,12 @@
 
                         <div class="border-card" data-doc="<%= blog._id %>">
 
+                                <a href="/chatpage" class="blog-profile">
+                                    <img src="/images/seller profile.jpg" alt="User Profile" class="profile-pic">
+                                    <span class="user-name">Manjubashini</span>
+                                </a>
+                    
+
                                 <img src="data:blog/<%=blog.img.contentType%>;base64,<%=blog.img.data.toString('base64')%>" alt="blog-img">
 
                                 <h3 style="margin: 10px 0; font-size: 20px; color: rgb(0,100,0);"><%= blog.title %></h3>
@@ -194,7 +206,7 @@
 
                                 <a href="/blogs/<%= blog._id %>"
 
-                                    style="text-decoration: none; width: 100px; background: rgb(0,100,0); color: #fff; border-radius: 10px; padding: 10px; font-size: medium; font-weight: bolder; text-align: center; display: block; transition: opacity 0.3s, background-color 0.3s, color 0.3s;"
+                                    style="text-decoration: none; width: 150px; background: rgb(0,100,0); color: #fff; border-radius: 10px; padding: 10px; font-size: medium; font-weight: bolder; text-align: center; display: block; transition: opacity 0.3s, background-color 0.3s, color 0.3s; margin-top: 10px;"
                                     onmouseover="this.style.opacity='0.8'; this.style.backgroundColor='#000000'; this.style.color='greenyellow';"
                                     onmouseout="this.style.opacity='1'; this.style.backgroundColor='rgb(0,100,0)'; this.style.color='#fff';">
                                     Read More
@@ -217,31 +229,117 @@
         <% } %>
 
     </div>
+
+
+
+
+
+
+    <section class="qa-section">
+
+
+        <h2 class="qa-heading" style="color: rgb(0,100,0); text-align: center;">Ask Your Questions About Agriculture</h2>
+
+
+        <div class="qa-container">
+
+
+
+            <div class="qa-column">
+
+                <img src="/images/how to crop yield.jpg" alt="Image 1" class="qa-image">
+                <p class="qa-question">How to improve crop yield?</p>
+                <p class="qa-answer">How can I protect my garden from deer?</p>
+
+            </div>
+
+            <div class="qa-column">
+
+                <img src="/images/answer.png" alt="Image 2" class="qa-image">
+                <p class="qa-question">To improve crop yield, focus on proper soil preparation, including nutrient-rich soil and adequate drainage.</p>
+                <p class="qa-answer"> Additionally, practice crop rotation and select disease-resistant varieties for healthier plants and higher yields.</p>
+
+            </div>
+
+           
+        </div>
+
+       
+
+        <div class="qa-user-input">
+
+            <div class="input-container">
+
+                <textarea id="question-textarea" placeholder="Ask your question here..."></textarea>
+
+                <label for="image-upload" class="image-upload-label">
+                    <input type="file" id="image-upload" accept="image/*" style="display: none;">
+                    Choose an image
+                </label>
+
+            </div>
+
+            <button onclick="submitQuestion()" style="font-weight:bold">Submit</button>
+
+        </div>
+
+    </section>
+
+
     
 
 
 </body>
 
 
+
+
     <script>
 
+        
 
-        document.addEventListener('DOMContentLoaded' , function(){
-            const anchorLinks = document.querySelectorAll('nav a[href^="#"]');
-            for(let link of anchorLinks){
-                link.addEventListener('click',function(e){
-                    e.preventDefault();
-                    const target =document.querySelector(this.getAttribute('href'));
-                    const offsetTop = target.offsetTop;
+        function submitQuestion() {
+            const questionText = document.querySelector('#question-textarea').value;
+            const selectedFile = document.querySelector('#image-upload').files[0];
 
-                    window.scrollTo({
-                        top:offsetTop,
-                        behavior:'smooth',
-                        duration:100,
-                    });
-                });
+
+            const userMessageContainer = document.createElement('div');
+            userMessageContainer.classList.add('qa-column', 'user-message');
+
+
+            const userQuestionAnswer = document.createElement('p');
+            userQuestionAnswer.classList.add('qa-question-answer', 'user-question-answer');
+            userQuestionAnswer.textContent = `${questionText}`; 
+
+   
+            const userImage = document.createElement('img');
+            userImage.classList.add('qa-image', 'user-image');
+
+
+            userMessageContainer.appendChild(userQuestionAnswer);
+            userMessageContainer.appendChild(userImage);
+
+  
+            const qaSection = document.querySelector('.qa-section');
+            qaSection.appendChild(userMessageContainer);
+
+
+            document.querySelector('#question-textarea').value = '';
+            document.querySelector('#image-upload').value = '';
+
+            
+            if (selectedFile) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    userImage.src = e.target.result;
+                };
+                reader.readAsDataURL(selectedFile);
             }
-        });
+
+         
+            console.log('Question:', questionText);
+        }
+
 
         
     </script>

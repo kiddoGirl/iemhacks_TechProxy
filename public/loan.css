@@ -1,0 +1,154 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-image: url('/images/newsalehome.jpg'); 
+    background-size: cover; 
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-top: 120px;
+}
+
+h1 {
+    text-align: center;
+    color: greenyellow;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.column {
+    width: 45%;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color:#fff;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 98%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="file"] {
+    width: 98%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+select {
+    width: 98%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+button[type="submit"] {
+    background:rgb(0,100,0);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    opacity: 0.8;
+    background-color: #000000;
+    color: greenyellow;
+}
+
+.approval-message {
+    font-weight: bolder;
+    font-size: large;
+    color: greenyellow;
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+
+.rejection-message {
+    font-weight: bolder;
+    color: red;
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+
+.containers {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.section:hover {
+    transform: scale(1.02); 
+}
+
+.section-title{
+    text-align: center;
+}
+
+.section:hover .section-title{
+    font-weight: bolder;
+    color:rgb(0,100,0);
+}
+
+.section {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.section-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.section-content {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+.section .section-content ul{
+    margin-bottom: 25px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.containers .section-content strong::before {
+    content: "▶"; 
+    margin-right: 5px; 
+    color: greenyellow; 
+    font-weight: bold;
+}
+
+.containers .section-content strong {
+    font-weight: bolder; 
+    font-size: large;
+    color: rgb(0,100,0);
+}

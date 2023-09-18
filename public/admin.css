@@ -1,0 +1,181 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+        
+.accountinfo{
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-image: url("/images/schemehome.jpg");
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.accountinfo .accntcont{
+    margin-top: 110px;
+    margin-bottom: 30px;
+    background: #fff;
+    width: 700px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 20px 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.accntprofile{
+    height:70px;
+    width:100%;
+    display: flex;
+    flex-direction:row;
+}
+
+.accntprofile img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin-left: 160px;
+}
+
+.accntprofile p{
+    font-size: xx-large;
+    font-weight: bolder;
+    color:rgb(0, 100, 0);
+    margin-left: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.accntdetails{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.accntdetailsrow{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.accntdetailsrow h4{
+    font-size: large;
+    font-weight: bold;
+    color: #000;
+    align-items: flex-start;
+    width: 240px;
+}
+
+.accntdetailsrow p{
+    font-size:medium;
+    font-weight: bold;
+    width: 170px;
+}
+
+.accntdetailscolumn{
+    display: flex;
+    flex-direction: column;
+}
+
+.accntdetailscolumn h4{
+    font-size: large;
+    font-weight: bold;
+    color: #000;
+    align-items: flex-start;
+    text-align: justify;
+    margin-bottom: 30px;
+    width: 70%;
+    margin-left: 95px;
+}
+
+
+
+
+.accntbtns {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center; 
+}
+
+
+
+
+.accntbtns a{
+    width: 250px;
+    padding: 15px;
+    color: #fff;
+    background: rgb(0,100,0);
+    font-size: larger;
+    font-weight: bolder;
+    border: none;
+    text-decoration: none;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.accntbtns a:hover{
+    opacity: 0.8;
+    background-color: #000000;
+    color: greenyellow;
+}
+
+
+.certificate-image {
+    width: 100%; 
+    max-width: 550px; 
+    height: 500px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 4px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.certificate-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999; 
+}
+
+.certificate-overlay img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.certificate-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    background-color: rgb(0, 100, 0);
+    padding: 15px;
+    font-weight: bolder;
+}
+
+.certificate-image:hover {
+    cursor: pointer;
+}

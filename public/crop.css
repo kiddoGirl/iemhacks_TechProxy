@@ -1,0 +1,94 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-image: url('/images/newsalehome.jpg'); 
+    background-size: cover; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+   
+}
+#cropForm {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 25px; 
+    background-color: rgba(0, 0, 0, 0.4); 
+    width: 80%; 
+    margin: 0 auto; 
+    padding: 20px; 
+    margin-top: 110px;
+    margin-bottom:30px;
+    position: relative;
+}
+
+input[type="text"],
+input[type="date"],
+textarea {
+    width: 90%; 
+    margin-bottom: 15px;
+}
+
+.form-column {
+    grid-column: span 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+
+.form-heading {
+    grid-column: span 2;
+    text-align: center;
+    color: greenyellow;
+    font-weight: bolder;
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+
+
+label {
+    display: block;
+    color: #fff;
+    font-weight: bolder;
+    font-size: large;
+}
+
+button[type="submit"] {
+    grid-column: span 2;
+    margin-top: 20px;
+    display: block;
+    margin: 0 auto;
+    color: #fff;
+    background: rgb(0,100,0);
+    font-size: larger;
+    font-weight: bolder;
+    border: none;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+  
+button[type="submit"]:hover{
+    opacity: 0.8;
+    background-color: #000000;
+    color: greenyellow;
+}
+
+#cropType,#location,#plantingDate{
+    padding: 10px;
+}
+
+#cropResult {
+    background-color: #e0e0e0; 
+    position: absolute; 
+    left: 20%; 
+    bottom:-300px;
+    width: 750px;
+}

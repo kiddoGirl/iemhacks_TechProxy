@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AgronomyNet - Get details from user</title>
+    <link rel="website icon" type="png"  href="images/logofinal.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="/sales.css">
     <link rel="stylesheet" href="/nav.css">
@@ -116,6 +117,16 @@
                     escape into nature's finest. Elevate your snacking with our meticulously grown apples, 
                     and let every moment be a crisp, delightful celebration of goodness. 
                 </p>
+                <div class="rating-section">
+                    <h1>Rate this Product</h1>
+                    <div class="rating-stars-container">
+                        <span class="fa fa-star unchecked"></span>
+                        <span class="fa fa-star unchecked"></span>
+                        <span class="fa fa-star unchecked"></span>
+                        <span class="fa fa-star unchecked"></span>
+                        <span class="fa fa-star unchecked"></span>
+                    </div>
+                </div>
                 <hr>
 
 
@@ -153,47 +164,63 @@
     <div class="addtocart" id="addtocart">
 
 
-        <div class="cartimg">
-
-            <img src="/images/apple.jpg">
-
+        <div class="center-content">
+            <h1>Enter Your details for Deliver</h1>
         </div>
 
 
-        <h1>Enter Your details for Deliver</h1>
+        <div class="form-container">
 
 
-        <div>
-
-
-            <form action="#" method="GET" class="cartuserinfo">
+            <form action="#" method="#" class="cartuserinfo">
                 
 
-                <label for="title">Enter Your Name</label>
-                <input for="text" name="cartusername">
+                <div class="form-column">
+                    <label for="title">Enter Your Name</label>
+                    <input for="text" name="cartusername">
 
-                <label for="title">Enter Your Phone Number</label>
-                <input for="number" name="cartusernumber">
+                    <label for="title">Enter Your Phone Number</label>
+                    <input for="number" name="cartusernumber">
 
-                <label for="title">Enter Your Address</label>
-                <input for="text" name="cartuseraddress">
+                    <label for="title">Enter Your Address</label>
+                    <input for="text" name="cartuseraddress">
+                </div>
+                
+                <div class="form-column">
+                    <label for="title">Enter Any Land Mark near your Address</label>
+                    <input for="title" name="cartuserlandmark">
 
-                <label for="title">Enter Any Land Mark near your Address</label>
-                <input for="title" name="cartuserlandmark">
+                    <label for="title">Enter your UserName in AgronomyNet for Direct Contact for Tracking Info</label>
+                    <input for="text" name="cartuserid">
+                </div>
 
-                <label for="title">How many Quantity You want!?</label>
-                <input for="number" name="cartquantitynumber">
-
-                <label for="title">Enter your UserName in AgronomyNet for Direct Contact for Tracking Info</label>
-                <input for="text" name="cartuserid">
+                <div class="form-column">
+                    <label for="cartquantity">You have chosen quantity 1</label>
+                    <img src="/images/apple.jpg" alt="Product Image" class="large-image">
+                </div>
 
             </form>
 
         </div>
 
-        <button type="submit">Submit</button>
+        <div class="center-content">
+            <button type="submit" id="submitBtn">Submit</button>
+        </div>
+
+
+        <div class="overlay" id="overlay">
+
+            <div class="message-box">
+                <p>Your order is submitted directely to the seller. The seller will contact you soon !!</p>
+            </div>
+
+            <span class="close-btn" id="closeBtn">X</span>
+        </div>
 
     </div>
+
+
+    <script src="/script/overlay.js"></script>
 
 
       
